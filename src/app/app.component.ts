@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   titles = ['Title1', 'Title2', 'Title3'];
+  testBinding = 'Esto es un test';
 }
