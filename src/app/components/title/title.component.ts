@@ -8,9 +8,11 @@ import { Component, Input, /* OnInit */ } from '@angular/core';
 export class TitleComponent /* implements OnInit */ {
   titleRendered: boolean
   @Input() titleText = 'This is the Title'
+
   constructor() {
     this.titleRendered = true
   }
+
 
 
   // ngOnInit(): void {
