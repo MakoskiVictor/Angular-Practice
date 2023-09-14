@@ -1,3 +1,4 @@
 <h1>Angular Practice</h1>
-<app-title [titleText]="'This is the New Title'" />
+<app-title  [titleText]="'This is the New Title'" />
+<app-title *ngFor="let title of titles" [titleText]="title" ></app-title>
 <router-outlet></router-outlet>
