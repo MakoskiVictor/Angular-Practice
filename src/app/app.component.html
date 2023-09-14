@@ -1,6 +1,12 @@
 <h1>Angular Practice</h1>
+<h2>Titles to Uppercase</h2>
 <app-title  [titleText]="'This is the New Title'" />
 <app-title *ngFor="let title of titles" [titleText]="title" ></app-title>
 <button (click)="toUppercase()" >Click to Upper</button>
+<h2>Show Titles Uppercase</h2>
+<app-title *ngFor="let title of uppercaseTitles" [titleText]="title" ></app-title>
+<button (click)="newUpperedCase()" >Click to Show</button>
+<h2>Reset</h2>
+<button (click)="resetParams()" >Reset</button>
 
 <router-outlet></router-outlet>
