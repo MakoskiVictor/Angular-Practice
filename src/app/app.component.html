@@ -1,5 +1,6 @@
 <h1>Angular Practice</h1>
 <app-title  [titleText]="'This is the New Title'" />
 <app-title *ngFor="let title of titles" [titleText]="title" ></app-title>
-{{testBinding}}
+<button (click)="toUppercase()" >Click to Upper</button>
+
 <router-outlet></router-outlet>
