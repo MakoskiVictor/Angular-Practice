@@ -12,14 +12,21 @@ export class AppComponent {
   testBinding = 'Esto es un test';
 
   // Inyectar dependencia (service en este caso)
-  constructor(private us: UtilitiesService) { }
+  //Si usamos static no hace falta inyectarlo en el constructor
+  // Con static
+  /* constructor(private us: UtilitiesService) { } */
 
   toUppercase() {
     this.titles = this.titles.map(title => title.toUpperCase())
   }
-
-  newUpperedCase() {
+  // Sin static
+  /* newUpperedCase() {
     this.uppercaseTitles = this.us.convertArrayItemsToUppercase(this.titles)
+  } */
+
+  // Con static
+  newUpperedCase() {
+    this.uppercaseTitles = UtilitiesService.convertArrayItemsToUppercase(this.titles)
   }
 
   resetParams() {
