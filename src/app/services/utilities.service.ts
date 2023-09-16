@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { CharactersApi } from '../app.models';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,6 @@ export class UtilitiesService {
 
   // Request GET
   getCharacters() {
-    return this.http.get('https://rickandmortyapi.com/api/character?limit=100')
+    return this.http.get<CharactersApi>('https://rickandmortyapi.com/api/character?limit=100')
   }
 }
