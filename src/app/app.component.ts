@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UtilitiesService } from './services/utilities.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,9 @@ export class AppComponent {
   titles = ['Title1', 'Title2', 'Title3'];
   uppercaseTitles: string[] = []
   testBinding = 'Esto es un test';
+
+  // Inyectar dependencia (service en este caso)
+  constructor(private us: UtilitiesService) { }
 
   toUppercase() {
     this.titles = this.titles.map(title => title.toUpperCase())
