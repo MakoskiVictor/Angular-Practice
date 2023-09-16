@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UtilitiesService } from './services/utilities.service';
 
 @Component({
@@ -6,10 +6,15 @@ import { UtilitiesService } from './services/utilities.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+
+
+
+export class AppComponent implements OnInit {
+
   titles = ['Title1', 'Title2', 'Title3'];
   uppercaseTitles: string[] = []
   testBinding = 'Esto es un test';
+  characters: any;
 
   // Inyectar dependencia (service en este caso)
   //Si usamos static no hace falta inyectarlo en el constructor
@@ -29,8 +34,21 @@ export class AppComponent {
     this.uppercaseTitles = UtilitiesService.convertArrayItemsToUppercase(this.titles)
   }
 
+
   resetParams() {
     this.titles = ['Title1', 'Title2', 'Title3'];
     this.uppercaseTitles = []
   }
+
+
+  //REQUST HTTP -> necesito el constructor para inyectarlo y el OnInit
+  constructor(private us: UtilitiesService) { }
+
+  ngOnInit(): void {
+    this.us.getCharacters().subscribe(content => {
+      console.log(content)
+      this.characters = content
+    })
+  }
+
 }
