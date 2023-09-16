@@ -19,7 +19,7 @@ export class AppComponent {
   }
 
   newUpperedCase() {
-    this.uppercaseTitles = this.titles.map(title => title.toUpperCase());
+    this.uppercaseTitles = this.us.convertArrayItemsToUppercase(this.titles)
   }
 
   resetParams() {
