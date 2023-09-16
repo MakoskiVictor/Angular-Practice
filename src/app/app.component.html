@@ -8,5 +8,9 @@
 <button (click)="newUpperedCase()" >Click to Show</button>
 <h2>Reset</h2>
 <button (click)="resetParams()" >Reset</button>
-
+<div>
+  <ul>
+    <li *ngFor="let character of characters.results" > {{character.name}} </li>
+  </ul>
+</div>
 <router-outlet></router-outlet>
