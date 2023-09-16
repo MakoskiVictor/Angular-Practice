@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class UtilitiesService {
 
-  /* constructor() { } */
+  constructor(private http: HttpClient) { }
 
   /* convertArrayItemsToUppercase(array: string[]) {
     return array.map(title => title.toUpperCase());
@@ -13,5 +14,10 @@ export class UtilitiesService {
 
   static convertArrayItemsToUppercase(array: string[]) {
     return array.map(title => title.toUpperCase());
+  }
+
+  // Request GET
+  getCharacters() {
+    return this.http.get('https://rickandmortyapi.com/api/character?limit=100')
   }
 }
