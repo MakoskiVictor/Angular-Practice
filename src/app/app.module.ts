@@ -4,7 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TitleComponent } from './components/title/title.component';
+// Para inyección de dependencias
 import { UtilitiesService } from './services/utilities.service';
+// Para requsts http
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -13,7 +16,8 @@ import { UtilitiesService } from './services/utilities.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule // Para usar requsts http en todo el modulo
   ],
   providers: [UtilitiesService],
   bootstrap: [AppComponent]
