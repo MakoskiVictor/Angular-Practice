@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TitleComponent } from './components/title/title.component';
+import { TitleComponent } from './modules/shared/components/title/title.component';
 // Para inyección de dependencias
 /* import { UtilitiesService } from './services/utilities.service'; */
 // Para requsts http
