@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TitleComponent } from './modules/shared/components/title/title.component';
+import { TitleComponent } from './modules/shared';
 // Para inyección de dependencias
 /* import { UtilitiesService } from './services/utilities.service'; */
 // Para requsts http
 import { HttpClientModule } from '@angular/common/http'
-import { CoreModule } from './modules/core/core.module';
+import { CoreModule } from './modules/core';
 
 @NgModule({
   declarations: [
