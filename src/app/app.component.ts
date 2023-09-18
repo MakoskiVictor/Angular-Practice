@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UtilitiesService } from './services/utilities.service';
-import { Result, CharactersApi } from './models/app.models';
+import { UtilitiesService } from './modules/core/services/utilities.service';
+import { Result, CharactersApi } from './modules/core/models/app.models';
 
 @Component({
   selector: 'app-root',
